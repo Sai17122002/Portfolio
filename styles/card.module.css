@@ -1,0 +1,149 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--on-surface);
+  box-shadow: 0 0 15px var(--box-shadow);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+}
+
+.project-card-image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--on-background-varient);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project-status {
+  display: flex;
+  align-items: center;
+}
+
+.project-status-text {
+  color: #008000;
+  text-transform: uppercase;
+}
+
+.project-status-circle {
+  position: relative;
+  height: 15px;
+  width: 20px;
+}
+
+.project-status-circle:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  top: -8px;
+  left: -7.5px;
+  border-radius: 100%;
+  background-color: #008000;
+  animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.project-status-circle:after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 5px;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  background-color: #008000;
+  animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.project-description {
+  margin: 0 0 20px 0;
+}
+
+.project-description a {
+  text-decoration: underline;
+}
+
+.project-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tag {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 4px 6px;
+  font-size: 0.95rem;
+}
+
+.project-link-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.project-link-container svg {
+  margin: 0 5px 0 0;
+  vertical-align: text-top;
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+  .project-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .project-card {
+    padding: 1rem;
+  }
+}

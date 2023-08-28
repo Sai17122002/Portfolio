@@ -1,0 +1,110 @@
+.section-title {
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+  margin: 4rem 0;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 75vh;
+  margin-bottom: 6rem;
+}
+
+.greeting {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-family: "Roboto Mono", monospace;
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+  color: var(--on-background-varient);
+}
+
+.hero img {
+  border-radius: 10%;
+}
+
+.hero-occupation {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.hero-occupation:before {
+  content: ">\A0";
+}
+
+.hero-text {
+  font-size: 1.45rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.hero-content a {
+  margin-top: 1rem;
+}
+
+/* About Section */
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .section-title {
+    margin: 3rem 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    height: fit-content;
+  }
+
+  .name {
+    font-size: 2.5em;
+  }
+
+  .hero-occupation {
+    font-size: 1.5rem;
+  }
+
+  .about-content,
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .experience-description ul {
+    margin-left: 1rem;
+  }
+}

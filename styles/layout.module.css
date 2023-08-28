@@ -1,0 +1,23 @@
+/* CSS Module - to import as a React component */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+  .app-container {
+    padding: 0 20px;
+  }
+}

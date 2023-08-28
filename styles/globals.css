@@ -1,0 +1,142 @@
+/* CSS loaded for every page */
+:root {
+  --primary-color: #a3c6ef;
+  --primary-varient: #74a0e0;
+  --link-color: #a69ce8;
+  --active-link-color: #9cb8e8;
+  --hover-link-color: #e89cde;
+  --on-primary: #000;
+  --on-surface: #262626;
+  --on-background: #d4d4d4;
+  --on-background-varient: #fff;
+  --background-color: #111010;
+  --card-border: #52525b;
+}
+
+[data-theme="light"] {
+  --primary-color: #5874b7;
+  --primary-varient: #5260a5;
+  --link-color: #7169ad;
+  --active-link-color: #006ed2;
+  --hover-link-color: #c932ba;
+  --on-primary: #0a0a0a;
+  --on-surface: #fff;
+  --on-background: #0a0a0a;
+  --on-background-varient: #2f4463;
+  --background-color: #fff;
+  --box-shadow: rgba(15, 46, 83, 0.5);
+  --card-border: transparent;
+}
+
+.only-light {
+  display: none;
+}
+
+[data-theme="light"] .only-light {
+  display: block;
+}
+
+[data-theme="light"] .only-dark {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 100%;
+  scroll-padding-top: 2.5rem;
+  background-color: var(--background-color);
+  color: var(--on-background);
+  scroll-behavior: smooth;
+}
+
+#__next {
+  height: 100%;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: var(--hover-link-color);
+}
+
+a:active {
+  color: var(--active-link-color);
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+p,
+ul {
+  line-height: 1.75;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--on-background-varient);
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  background-color: var(--primary-varient);
+  border-radius: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--link-color);
+  color: #fff;
+}
+
+.cursor {
+  content: "";
+  padding: 0px 6px;
+  margin: 0 0 0 2px;
+  background-color: var(--primary-color);
+}
+
+.blink {
+  animation: blink-animation 1s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1s steps(2, start) infinite;
+}
+
+svg{
+  fill: #006ed2;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
