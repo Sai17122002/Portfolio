@@ -9,7 +9,7 @@ export default function Navbar() {
         <span className={styles["large-logo"]}>Sai Aravind Raj</span>
         <Image
           className={styles["small-logo"]}
-          src="/logo.svg"
+          src="/s-icon.png"
           alt="Logo"
           width="40"
           height="40"

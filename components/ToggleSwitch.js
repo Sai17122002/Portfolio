@@ -3,12 +3,20 @@ import styles from "../styles/toggle.module.css";
 
 const ToggleSwitch = () => {
   function handleTheme() {
-    const newTheme =
-      document.documentElement.getAttribute("data-theme") === "light"
-        ? "dark"
-        : "light";
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
+
+    if(localStorage.getItem("theme") === "light")
+    {
+      localStorage.setItem("theme", "dark");
+    }
+    else if(localStorage.getItem("theme") === "dark"){
+      localStorage.setItem("theme", "light");
+    }
+    else
+    {
+      localStorage.getItem("theme","dark");
+    }
+    document.documentElement.setAttribute("data-theme", localStorage.getItem("theme"));
+    
   }
 
   return (
